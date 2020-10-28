@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS | Event bubbling and capturing</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h3>Event bubbling and capturing</h3>
+    <h4>Legend:</h4>
+    <ul>
+      <li><i>events</i> - field in which events will be printed</li>
+      <li><i>playfield</i> - elements with event listeners added</li>
+    </ul>
+    <h4>Task:</h4>
+    <ol class="tasks">
+      <li>
+        Add event listeners to squares described as 'div1', 'div2', 'div3'
+      </li>
+      <li>
+        Modifiy event listeners in such way that:
+        <ul>
+          <li>clicking on 'div1' won't fire event listener from 'div3'</li>
+          <li>clicking on 'div2' will fire event listener form 'div3'</li>
+        </ul>
+      </li>
+      <li>
+        Add event listener in such way that:
+        <ul>
+          <li>
+            clicking on 'div2' will trigger event listener from 'div3' during
+            capturing phase
+          </li>
+          <li>
+            clicking on 'div1' and 'div3' won't trigger event listener from
+            'div3' during capturing phase
+          </li>
+        </ul>
+      </li>
+    </ol>
+    <table>
+      <tr>
+        <th>events</th>
+        <th>playfield</th>
+      </tr>
+      <tr>
+        <td><ol class="events"></ol></td>
+        <td class="playfield">
+          <div id="div3">
+            <div id="div2">
+              <div id="div1"></div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <script src="index.js"></script>
+  </body>
+</html>
